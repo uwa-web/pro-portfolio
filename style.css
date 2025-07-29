@@ -1,0 +1,450 @@
+
+        /* CSS Variables for Easy Brand Color Customization */
+        :root {
+            --burnt-orange: #CC5500;
+            --white: #FFFFFF;
+            --dark-text: #2c2c2c;
+            --light-gray-bg: #f9f9f9;
+            --border-color: #e0e0e0;
+        }
+
+        /* --- General Styles --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--dark-text);
+            line-height: 1.7;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--dark-text);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* --- Button Styles --- */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--burnt-orange);
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 20px rgba(204, 85, 0, 0.25);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(204, 85, 0, 0.4);
+        }
+
+        /* --- Header --- */
+        .main-header {
+            padding: 20px 0;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            font-size: 24px;
+            color: var(--burnt-orange);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 100px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--burnt-orange), var(--dark-text));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero .subtitle {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            color: #555;
+        }
+        
+        .hero .alert {
+            display: inline-block;
+            background-color: rgba(204, 85, 0, 0.1);
+            color: var(--burnt-orange);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .alert {
+    animation: bounce 1s ease-in-out infinite;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #d80000;
+    background-color: #fff4f4;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin: 20px auto;
+    max-width: fit-content;
+}
+
+/* Bounce keyframes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+}
+
+.learn-section {
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+/* Hover effect on entire section */
+.learn-section:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+.learn-item {
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.learn-section:hover .learn-item:hover {
+    background-color: #f0f8ff;
+}
+
+.audience-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.audience-item {
+    background-color: #f7f7f7;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+/* Unique hover effect */
+.audience-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    background-color: #fff8e1;
+    color: #d97706;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: bounce 0.4s ease-in-out;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+        /* --- Countdown Timer --- */
+        #countdown {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .countdown-item {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+            min-width: 100px;
+        }
+
+        .countdown-item div {
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--burnt-orange);
+        }
+
+        .countdown-item span {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #777;
+        }
+
+        /* --- Problem/Pain Points Section --- */
+        .pain-points {
+            background: var(--light-gray-bg);
+        }
+
+        .pain-points h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .question-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid var(--burnt-orange);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* --- Updated CSS for Question Card Hover Effect --- */
+
+.question-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 5px solid var(--burnt-orange);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    /* Add this line for a smooth animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add this new block for the hover effect itself */
+.question-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+        /* --- What You'll Learn Section --- */
+        .learn-section h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        .learn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 50px;
+        }
+
+        .learn-item {
+            display: flex;
+            align-items: flex-start;
+            font-size: 18px;
+        }
+
+        .learn-item .icon {
+            font-size: 24px;
+            margin-right: 15px;
+            color: var(--burnt-orange);
+        }
+
+        /* --- FOMO/Exclusivity Section --- */
+        .fomo-section {
+            background-color: var(--dark-text);
+            color: var(--white);
+            text-align: center;
+            border-radius: 20px;
+            margin: 0 20px;
+            padding: 60px 40px;
+        }
+
+        .fomo-section h3 {
+            font-size: 36px;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+        
+        .fomo-section .lock-icon {
+            font-size: 48px;
+            color: var(--burnt-orange);
+            margin-bottom: 20px;
+        }
+
+        .fomo-section p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* --- Who It's For Section --- */
+        .who-for {
+            background-color: var(--light-gray-bg);
+        }
+        .who-for h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .audience-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+        }
+        
+        .audience-item {
+            background-color: var(--white);
+            color: var(--dark-text);
+            padding: 10px 25px;
+            border-radius: 30px;
+            border: 1px solid var(--border-color);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* --- About the Coach Section --- */
+        .about-coach {
+            text-align: center;
+        }
+
+        .about-coach h2 {
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        .coach-bio {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .coach-photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--burnt-orange);
+        }
+
+        .coach-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.coach-photo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+        .coach-bio p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .coach-bio h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        /* --- Final CTA Section --- */
+        .final-cta {
+            background: linear-gradient(45deg, #fff8f5, #f5f7fa);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 40px;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+        
+        .final-cta p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            color: #555;
+        }
+
+        /* --- Footer --- */
+        .main-footer {
+            background: var(--dark-text);
+            color: var(--white);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 48px; }
+            h2 { font-size: 36px; }
+            .learn-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 60px 0; }
+            .hero h1 { font-size: 38px; }
+            .hero .subtitle { font-size: 18px; }
+            .cta-button { font-size: 16px; padding: 12px 30px; }
+
+            #countdown { flex-wrap: wrap; gap: 15px; }
+            .countdown-item { min-width: calc(50% - 10px); padding: 15px; }
+            .countdown-item div { font-size: 36px; }
+
+            .coach-bio { flex-direction: column; text-align: center; }
+            .final-cta h2 { font-size: 32px; }
+        }
+  
