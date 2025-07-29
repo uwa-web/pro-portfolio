@@ -1,7 +1,7 @@
 // --- The Countdown Timer Logic ---
 
         // Set the date we're counting down to (Year, Month (0-11), Day, Hour, Minute, Second)
-        const countdownDate = new Date("August 1, 2025 00:00:00").getTime();
+        const countdownDate = new Date("August 23, 2025 00:00:00").getTime();
 
         // Update the count down every 1 second
         const countdownFunction = setInterval(function() {
